@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <title>Alona English – אנגלית שפותחת דלתות</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- פונטים: Heebo לכל הטקסט, Georgia לכותרות -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background-color: #FFFCF5;
             color: #3b2a1a;
             line-height: 1.6;
+            font-family: "Heebo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         }
 
         .page {
@@ -19,255 +25,18 @@
             padding: 24px 16px 80px;
         }
 
-        /* כותרת עליונה */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-        }
-
-        .hero-title-main {
-            font-size: 48px;
-            color: #0d4d8c; /* כחול כמו בכותרת */
-            margin-bottom: 8px;
-        }
-
-        .hero-title-sub {
-            font-size: 36px;
-            color: #0d4d8c;
-        }
-
-        .hero-red-line {
-            font-size: 32px;
-            color: #8b1414;
-            margin: 40px 0 8px;
-        }
-
-        .hero-red-line + .hero-red-line {
-            margin-top: 0;
-        }
-
-        .hero-description {
-            font-size: 22px;
-            margin-top: 40px;
-        }
-
-        /* כותרת ״מה המצב האנגלית שלכם״ */
-        .section-title {
-            font-size: 36px;
-            color: #8b1414;
-            text-align: center;
-            margin: 72px 0 16px;
-        }
-
-        /* אזור הכרטיסיות */
-        .cards-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            justify-content: center;
-            margin-top: 32px;
-        }
-
-        .card {
-            flex: 1 1 260px;
-            max-width: 340px;
-            border-radius: 24px;
-            padding: 28px 24px 24px;
-            box-shadow: 0 14px 40px rgba(0,0,0,0.08);
-            background: #ffffff;
-        }
-
-        .card--green { background: #e4f7ea; }
-        .card--yellow { background: #ffeeb0; }
-        .card--purple { background: #f0e5ff; }
-
-        .card-emoji {
-            font-size: 42px;
-            margin-bottom: 16px;
-        }
-
-        .card-question {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .card-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .card-text {
-            font-size: 16px;
-            margin-bottom: 24px;
-        }
-
-        .card-button {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
-            padding: 14px 18px;
-            border-radius: 999px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            color: #ffffff;
-            background: linear-gradient(90deg, #18b27a, #46cf95);
-        }
-
-        .card--yellow .card-button {
-            background: linear-gradient(90deg, #f6a623, #ffcb4c);
-            color: #5b3c00;
-        }
-
-        .card--purple .card-button {
-            background: linear-gradient(90deg, #b06bf3, #e18afc);
-        }
-
-        /* אזור שיחת התאמה */
-        .match-section {
-            margin-top: 72px;
-            text-align: center;
-        }
-
-        .match-title {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .match-text {
-            font-size: 18px;
-            margin-bottom: 32px;
-        }
-
-        .match-button {
-            display: inline-block;
-            padding: 18px 32px;
-            border-radius: 999px;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-            color: #ffffff;
-            background: linear-gradient(90deg, #1ab4a2, #3cd3c5);
-        }
-
-        /* רספונסיביות */
-        @media (max-width: 768px) {
-            .hero-title-main {
-                font-size: 34px;
-            }
-            .hero-title-sub {
-                font-size: 26px;
-            }
-            .hero-red-line {
-                font-size: 24px;
-            }
-            .section-title {
-                font-size: 28px;
-            }
-            .cards-row {
-                gap: 16px;
-            }
+        /* כותרות ראשיות/משניות בפונט Georgia */
+        .georgia {
+            font-family: Georgia, "Times New Roman", serif;
         }
     </style>
 </head>
 <body>
 <div class="page">
 
-    <header class="top-bar">
-        <div class="logo-text">Alona English</div>
-        <!-- כאן אפשר להוסיף לוגו בעתיד -->
-    </header>
-
-    <!-- כותרת ראשית -->
-    <section>
-        <h1 class="hero-title-main">Alona English – <span class="hero-title-sub">אנגלית שפותחת דלתות</span></h1>
-
-        <p class="hero-red-line">הפסיקו לפחד מאנגלית –</p>
-        <p class="hero-red-line">התחילו לדבר בביטחון כבר היום</p>
-
-        <p class="hero-description">
-            בקבוצות קטנות (עד 7 משתתפים) – נדבר, נצחק, נלמד<br>
-            ונצבור ביטחון אמיתי באנגלית.
-        </p>
-    </section>
-
-    <!-- טקסט לפני הכרטיסיות -->
-    <section style="text-align: center; margin-top: 56px;">
-        <p style="font-size: 20px;">
-            🎓 עם אלונה – מורה לאנגלית עם 15 שנות ניסיון<br>
-            📅 מפגש שבועי, לומדים ומדברים אנגלית באווירה מעולה
-        </p>
-        <h2 class="section-title">מה המצב האנגלית שלכם? 👇</h2>
-    </section>
-
-    <!-- כרטיסיות -->
-    <section class="cards-row">
-        <!-- כרטיס ירוק -->
-        <article class="card card--green">
-            <div class="card-emoji">🤐</div>
-            <div class="card-question">
-                מתקשים לחבר משפטים ולדבר בשטף,<br>
-                מנסים אבל לא מצליחים לדבר?
-            </div>
-            <div class="card-title">מדברים מהבסיס</div>
-            <div class="card-text">
-                מדברים בביטחון בקבוצה קטנה ותומכת.
-            </div>
-            <a class="card-button" href="#match">אשמח לשמוע על הקבוצה</a>
-        </article>
-
-        <!-- כרטיס צהוב -->
-        <article class="card card--yellow">
-            <div class="card-emoji">🤯</div>
-            <div class="card-question">
-                חולמים לדבר אנגלית בכל מקום אבל<br>
-                זה מרגיש כמו משימה בלתי אפשרית?
-            </div>
-            <div class="card-title">מהיסודות להצלחה</div>
-            <div class="card-text">
-                הקורס שייקח אתכם מאפס ועד דיבור בטוח.
-            </div>
-            <a class="card-button" href="#match">אשמח לפרטים על הקורס</a>
-        </article>
-
-        <!-- כרטיס סגול -->
-        <article class="card card--purple">
-            <div class="card-emoji">🤔</div>
-            <div class="card-question">
-                מבינים אנגלית, אבל הדיבור לא זורם,<br>
-                מנסים לבנות משפט ונתקעים?
-            </div>
-            <div class="card-title">מדברים ומתקדמים</div>
-            <div class="card-text">
-                משייפים את האנגלית לדיבור שוטף ובטוח.
-            </div>
-            <a class="card-button" href="#match">זה מתאים לי, אשמח לפרטים</a>
-        </article>
-    </section>
-
-    <!-- אזור שיחת התאמה -->
-    <section id="match" class="match-section">
-        <h2 class="match-title">עדיין לא בטוחים איזו קבוצה הכי מתאימה לכם?</h2>
-        <p class="match-text">
-            השאירו פרטים ואלונה תחזור אליכם לשיחת התאמה קצרה.
-        </p>
-        <!-- TODO: להחליף כאן לכתובת הטופס שלך -->
-        <a class="match-button" href="https://YOUR-GOOGLE-FORM-LINK" target="_blank" rel="noopener">
-            אני רוצה שיחת התאמה
-        </a>
-    </section>
+    <!-- בשלב הזה יש רק טקסט בדיקה -->
+    <h1 class="georgia">כאן יבוא האתר של Alona English</h1>
+    <p>הרקע בצבע ‎#FFFCF5, הכותרת ב‑Georgia, ושאר הטקסט יהיה ב‑Heebo.</p>
 
 </div>
 </body>
